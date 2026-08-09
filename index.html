@@ -3,11 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valentina Beauty | Luxe Makeup Boutique</title>
+    <title>Valentina Beauty | Boutique de Luxo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
     <style>
         /* ==========================================================================
-           RESET & ESSENTIAL STYLES
+           VARIÁVEIS DE CORES & RESET
            ========================================================================== */
+        :root {
+            --rosa-bebe: #FAD2E1;
+            --amarelo-pastel: #FFF1C5;
+            --texto-premium: #5A4A42;
+            --fundo-suave: #FFFDFA;
+            --branco-puro: #FFFFFF;
+        }
+
         * {
             box-sizing: border-box;
             margin: 0;
@@ -15,446 +24,364 @@
         }
 
         body {
-            font-family: 'Poppins', 'Segoe UI', BlinkMacSystemFont, sans-serif;
-            background-color: #0D0B0E;
-            color: #F4EAEF;
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--fundo-suave);
+            color: var(--texto-premium);
             line-height: 1.6;
         }
 
         /* ==========================================================================
-           NOTIFICATION TOP BAR
+           BARRA DE ANÚNCIO (TOP BAR)
            ========================================================================== */
-        .top-bar {
-            background: linear-gradient(90deg, #FFB6C1, #FFE4E1, #FFB6C1);
-            color: #2A0813;
+        .promo-bar {
+            background-color: var(--amarelo-pastel);
             text-align: center;
-            padding: 10px 15px;
-            font-size: 0.85rem;
-            font-weight: 800;
-            letter-spacing: 1px;
+            padding: 10px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
             text-transform: uppercase;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
         }
 
         /* ==========================================================================
-           HEADER & HERO
+           CABEÇALHO (HEADER)
            ========================================================================== */
         header {
-            background: radial-gradient(circle, #2A081A 0%, #0D0B0E 100%);
-            border-bottom: 1px solid rgba(255, 182, 193, 0.2);
-            padding: 3.5rem 1.5rem;
+            background-color: var(--rosa-bebe);
+            padding: 4rem 1.5rem;
             text-align: center;
+            border-bottom: 5px solid var(--amarelo-pastel);
         }
 
         header h1 {
-            font-size: 3rem;
-            font-weight: 900;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            background: linear-gradient(135deg, #FFF, #FFB6C1);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
             margin-bottom: 0.5rem;
+            color: var(--texto-premium);
         }
 
         header p {
             font-size: 1.1rem;
-            color: #D8B4C8;
             font-weight: 300;
-        }
-
-        .badge-vip {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 6px 20px;
-            border-radius: 30px;
-            background: rgba(255, 182, 193, 0.1);
-            border: 1px solid #FFB6C1;
-            color: #FFB6C1;
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 2px;
-            text-transform: uppercase;
+            font-style: italic;
         }
 
         /* ==========================================================================
-           NAVIGATION BAR
+           NAVEGAÇÃO (STICKY NAV)
            ========================================================================== */
         nav {
-            background-color: #161218;
+            background-color: var(--branco-puro);
             padding: 1rem;
             text-align: center;
             position: sticky;
             top: 0;
             z-index: 1000;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
         }
 
         nav a {
-            color: #D8B4C8;
-            margin: 0 12px;
             text-decoration: none;
+            color: var(--texto-premium);
+            margin: 0 15px;
+            font-weight: 700;
             font-size: 0.9rem;
-            font-weight: 600;
-            transition: all 0.3s ease;
+            transition: 0.3s;
         }
 
         nav a:hover {
-            color: #FFB6C1;
-            text-shadow: 0 0 10px rgba(255, 182, 193, 0.5);
+            color: #D47A9D;
         }
 
         /* ==========================================================================
-           MAIN CONTAINER
+           CONTAINER PRINCIPAL
            ========================================================================== */
         .container {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 3rem 1.5rem;
         }
 
-        /* STORE LOCATION CARD */
-        .location-card {
-            background: linear-gradient(145deg, #18131B, #120E15);
-            border: 1px solid rgba(255, 182, 193, 0.2);
-            border-radius: 20px;
-            padding: 2.5rem;
+        /* CARD DA LOJA FÍSICA */
+        .store-card {
+            background-color: var(--branco-puro);
+            border: 3px solid var(--rosa-bebe);
+            border-radius: 30px;
+            padding: 3rem;
+            text-align: center;
             margin-bottom: 4rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 10px 30px rgba(250, 210, 225, 0.3);
         }
 
-        .location-card h2 {
-            color: #FFB6C1;
-            font-size: 1.8rem;
+        .store-card h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
             margin-bottom: 1rem;
         }
 
-        .location-card p {
-            color: #C2B2BC;
-            margin-bottom: 0.8rem;
-        }
-
-        /* SECTION TITLES */
+        /* ==========================================================================
+           GRADE DE PRODUTOS
+           ========================================================================== */
         .section-title {
             text-align: center;
-            font-size: 2.2rem;
-            color: #FFF;
-            margin-bottom: 0.5rem;
-            letter-spacing: 1px;
-        }
-
-        .section-subtitle {
-            text-align: center;
-            color: #8E7A86;
-            font-size: 0.95rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
             margin-bottom: 3rem;
         }
 
-        /* ==========================================================================
-           PRODUCTS GRID
-           ========================================================================== */
-        .products-grid {
+        .product-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-            margin-bottom: 4rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 5rem;
         }
 
         .product-card {
-            background: #161218;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 18px;
+            background-color: var(--branco-puro);
+            border-radius: 25px;
             padding: 1.5rem;
+            border: 2px solid var(--amarelo-pastel);
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            transition: 0.4s ease;
             position: relative;
-            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
         }
 
         .product-card:hover {
-            transform: translateY(-7px);
-            border-color: #FFB6C1;
-            box-shadow: 0 10px 25px rgba(255, 182, 193, 0.15);
-        }
-
-        .discount-badge {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: #FFB6C1;
-            color: #161218;
-            font-weight: 800;
-            font-size: 0.7rem;
-            padding: 4px 10px;
-            border-radius: 10px;
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(250, 210, 225, 0.4);
+            border-color: var(--rosa-bebe);
         }
 
         .product-img {
             width: 100%;
-            height: 200px;
+            height: 250px;
             object-fit: cover;
-            border-radius: 12px;
-            margin-bottom: 1.2rem;
+            border-radius: 20px;
+            margin-bottom: 1.5rem;
         }
 
-        .product-category {
-            font-size: 0.75rem;
-            color: #FFB6C1;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            display: block;
-            margin-bottom: 0.4rem;
+        .badge {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            background-color: var(--rosa-bebe);
+            color: var(--texto-premium);
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.7rem;
+            font-weight: 800;
         }
 
         .product-card h3 {
-            font-size: 1.1rem;
-            color: #FFF;
-            margin-bottom: 0.6rem;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
         }
 
-        .product-description {
-            font-size: 0.85rem;
-            color: #9E8C96;
-            margin-bottom: 1.2rem;
+        .product-desc {
+            font-size: 0.9rem;
+            color: #777;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
         }
 
-        .price-box {
-            margin-top: auto;
-            padding-top: 1rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        .price-area {
             display: flex;
-            align-items: center;
             justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #EEE;
+            padding-top: 1rem;
         }
 
         .price-old {
             font-size: 0.8rem;
-            color: #6E5E67;
             text-decoration: line-through;
-            display: block;
+            color: #AAA;
         }
 
-        .price-current {
-            font-size: 1.3rem;
-            font-weight: 800;
-            color: #FFB6C1;
+        .price-new {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #D47A9D;
         }
 
         .btn-buy {
-            background: linear-gradient(135deg, #FFB6C1, #FFA0B4);
-            color: #161218;
-            padding: 8px 18px;
-            border-radius: 20px;
-            font-weight: 800;
-            font-size: 0.8rem;
+            background-color: var(--amarelo-pastel);
+            color: var(--texto-premium);
+            padding: 10px 20px;
+            border-radius: 15px;
             text-decoration: none;
-            transition: opacity 0.3s ease;
+            font-weight: 700;
+            font-size: 0.8rem;
+            transition: 0.3s;
         }
 
         .btn-buy:hover {
-            opacity: 0.9;
+            background-color: var(--rosa-bebe);
         }
 
         /* ==========================================================================
-           BENEFITS / QUALITY SECTION
+           QUALIDADE & PAGAMENTO
            ========================================================================== */
-        .benefits-grid {
+        .benefits {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
             margin-bottom: 4rem;
         }
 
-        .benefit-card {
-            background-color: #120E15;
-            border: 1px solid rgba(255, 182, 193, 0.1);
-            border-radius: 15px;
-            padding: 1.8rem 1.2rem;
-            text-align: center;
-        }
-
-        .benefit-card h4 {
-            color: #FFB6C1;
-            margin-bottom: 0.5rem;
-            font-size: 1.05rem;
-        }
-
-        .benefit-card p {
-            font-size: 0.85rem;
-            color: #8E7A86;
-        }
-
-        /* ==========================================================================
-           PAYMENT & CONTACT SECTION
-           ========================================================================== */
-        .checkout-section {
-            background: #161218;
-            border: 1px solid rgba(255, 182, 193, 0.2);
+        .benefit-item {
+            background-color: var(--branco-puro);
+            padding: 2rem;
             border-radius: 20px;
-            padding: 2.5rem 2rem;
-            margin-bottom: 3rem;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
+            text-align: center;
+            border: 1px solid var(--amarelo-pastel);
         }
 
-        .pix-box {
-            background-color: #0D0B0E;
-            border: 1px solid rgba(255, 182, 193, 0.15);
-            border-radius: 14px;
+        .benefit-item h4 {
+            margin-bottom: 0.5rem;
+            color: #D47A9D;
+        }
+
+        .checkout-box {
+            background-color: var(--branco-puro);
+            border: 3px solid var(--amarelo-pastel);
+            border-radius: 30px;
+            padding: 3rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            align-items: center;
+        }
+
+        .pix-container {
+            background-color: var(--fundo-suave);
             padding: 1.5rem;
+            border-radius: 15px;
+            border: 2px dashed var(--rosa-bebe);
             text-align: center;
         }
 
         .pix-key {
-            background: rgba(255, 182, 193, 0.1);
-            color: #FFB6C1;
-            border: 1px dashed #FFB6C1;
-            padding: 10px;
-            border-radius: 8px;
             font-weight: 800;
-            font-size: 0.95rem;
-            margin: 12px 0;
-            word-break: break-all;
+            font-size: 1.1rem;
+            color: var(--texto-premium);
+            display: block;
+            margin: 10px 0;
         }
 
-        .whatsapp-box {
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .btn-whatsapp {
+        .whatsapp-btn {
             display: inline-block;
             background-color: #25D366;
-            color: #FFFFFF;
-            padding: 12px 28px;
+            color: white;
+            padding: 15px 30px;
             border-radius: 30px;
-            font-weight: 800;
             text-decoration: none;
-            font-size: 0.95rem;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.2);
-            margin-top: 10px;
+            font-weight: 800;
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
         }
 
         /* ==========================================================================
-           FOOTER
+           RODAPÉ (FOOTER)
            ========================================================================== */
         footer {
-            background-color: #080608;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            color: #6E5E67;
+            background-color: var(--rosa-bebe);
+            padding: 3rem 1.5rem;
             text-align: center;
-            padding: 2.5rem 1rem;
             font-size: 0.85rem;
         }
 
         footer strong {
-            color: #9E8C96;
+            display: block;
+            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
 
-    <div class="top-bar">
-        💎 FRETE GRÁTIS EM COMPRAS ACIMA DE R$ 199 | 5% DE DESCONTO EXCLUSIVO VIA PIX 💎
+    <div class="promo-bar">
+        ✨ GANHE 5% DE DESCONTO NO PIX | FRETE GRÁTIS ACIMA DE R$ 199,00 ✨
     </div>
 
     <header>
         <h1>Valentina Beauty</h1>
-        <p>Boutique de Alta Maquiagem & Cosméticos de Luxo</p>
-        <span class="badge-vip">Flagship Store & Online Boutique</span>
+        <p>A arte da beleza em cada detalhe</p>
     </header>
 
     <nav>
-        <a href="#loja">Loja Física</a>
-        <a href="#produtos">Coleção</a>
-        <a href="#diferenciais">Qualidade</a>
+        <a href="#loja">Loja Paulista</a>
+        <a href="#colecao">Nossa Coleção</a>
+        <a href="#qualidade">Qualidade</a>
         <a href="#pagamento">Pagamento Pix</a>
-        <a href="#contato">WhatsApp VIP</a>
     </nav>
 
     <div class="container">
 
-        <section id="loja" class="location-card">
-            <h2>📍 Valentina Beauty Flagship</h2>
-            <p><strong>Endereço:</strong> Av. Paulista, nº 246 - Cerqueira César, São Paulo - SP</p>
-
-            <p>Atendimento exclusivo com maquiadoras profissionais, bancadas iluminadas e teste de produtos no camarim presencial.</p>
+        <section id="loja" class="store-card">
+            <h2>📍 Experiência Presencial</h2>
+            <p><strong>Avenida Paulista, 246 - São Paulo, SP</strong></p>
+            <p>Venha descobrir sua melhor versão em nosso camarim exclusivo com maquiadoras profissionais e atendimento VIP.</p>
         </section>
 
-        <section id="produtos">
-            <h2 class="section-title">Coleção em Destaque</h2>
-            <p class="section-subtitle">Alta pigmentação, tecnologia de fixação e fórmulas cruelty-free.</p>
-
-            <div class="products-grid">
+        <section id="colecao">
+            <h2 class="section-title">Nossos Queridinhos</h2>
+            <div class="product-grid">
 
                 <div class="product-card">
-                    <span class="discount-badge">15% OFF</span>
-                    <img src="https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=500" alt="Lip Gloss Valentina" class="product-img">
-                    <div>
-                        <span class="product-category">Lábios & Nutrição</span>
-                        <h3>Glossy Lip Oil Hydrating</h3>
-                        <p class="product-description">Fórmula rica em ácido hialurônico para hidratação e brilho espelhado de longa duração.</p>
-                    </div>
-                    <div class="price-box">
+                    <span class="badge">15% OFF</span>
+                    <img src="https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=500" alt="Lip Gloss" class="product-img">
+                    <span class="category-tag">Lábios</span>
+                    <h3>Glossy Bubble Oil</h3>
+                    <p class="product-desc">Nutrição intensa com ácido hialurônico para lábios volumosos e hidratados.</p>
+                    <div class="price-area">
                         <div>
-                            <span class="price-old">R$ 89,90</span>
-                            <span class="price-current">R$ 76,40</span>
+                            <span class="price-old">R$ 89,90</span><br>
+                            <span class="price-new">R$ 76,40</span>
                         </div>
                         <a href="#pagamento" class="btn-buy">Comprar</a>
                     </div>
                 </div>
 
                 <div class="product-card">
-                    <span class="discount-badge">20% OFF</span>
-                    <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=500" alt="Paleta de Sombras" class="product-img">
-                    <div>
-                        <span class="product-category">Olhos & Glow</span>
-                        <h3>Paleta Nude Glam Edition</h3>
-                        <p class="product-description">12 sombras aveludadas ultra pigmentadas com acabamento matte e glitter prensado.</p>
-                    </div>
-                    <div class="price-box">
+                    <span class="badge">BEST SELLER</span>
+                    <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=500" alt="Paleta" class="product-img">
+                    <span class="category-tag">Olhos</span>
+                    <h3>Paleta Nude Glow</h3>
+                    <p class="product-desc">12 cores ultra pigmentadas com acabamento aveludado para o dia e noite.</p>
+                    <div class="price-area">
                         <div>
-                            <span class="price-old">R$ 249,00</span>
-                            <span class="price-current">R$ 199,20</span>
+                            <span class="price-old">R$ 149,00</span><br>
+                            <span class="price-new">R$ 119,20</span>
                         </div>
                         <a href="#pagamento" class="btn-buy">Comprar</a>
                     </div>
                 </div>
 
                 <div class="product-card">
-                    <span class="discount-badge">10% OFF</span>
-                    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=500" alt="Kit de Pincéis" class="product-img">
-                    <div>
-                        <span class="product-category">Acessórios VIP</span>
-                        <h3>Kit Pincéis Velvet Touch</h3>
-                        <p class="product-description">Conjunto com 8 pincéis profissionais de cerdas sintéticas ultra macias e acabamento metálico.</p>
-                    </div>
-                    <div class="price-box">
+                    <span class="badge">KIT ELITE</span>
+                    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=500" alt="Pinceis" class="product-img">
+                    <span class="category-tag">Acessórios</span>
+                    <h3>Kit Pincéis Rose Gold</h3>
+                    <p class="product-desc">8 pincéis de alta precisão com cerdas sintéticas premium ultra macias.</p>
+                    <div class="price-area">
                         <div>
-                            <span class="price-old">R$ 159,90</span>
-                            <span class="price-current">R$ 143,90</span>
+                            <span class="price-old">R$ 159,90</span><br>
+                            <span class="price-new">R$ 143,90</span>
                         </div>
                         <a href="#pagamento" class="btn-buy">Comprar</a>
                     </div>
                 </div>
 
                 <div class="product-card">
-                    <span class="discount-badge">LANÇAMENTO</span>
-                    <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=500" alt="Iluminador Facial" class="product-img">
-                    <div>
-                        <span class="product-category">Pele & Brilho</span>
-                        <h3>Iluminador Liquid Glow</h3>
-                        <p class="product-description">Gotas iluminadoras de alta fusão que conferem um viço natural e radiante à pele.</p>
-                    </div>
-                    <div class="price-box">
+                    <span class="badge">NOVIDADE</span>
+                    <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=500" alt="Iluminador" class="product-img">
+                    <span class="category-tag">Pele</span>
+                    <h3>Liquid Glow Drops</h3>
+                    <p class="product-desc">Iluminador líquido de alta fusão para um viço radiante e natural.</p>
+                    <div class="price-area">
                         <div>
-                            <span class="price-old">R$ 119,90</span>
-                            <span class="price-current">R$ 99,90</span>
+                            <span class="price-old">R$ 119,90</span><br>
+                            <span class="price-new">R$ 99,90</span>
                         </div>
                         <a href="#pagamento" class="btn-buy">Comprar</a>
                     </div>
@@ -463,60 +390,42 @@
             </div>
         </section>
 
-        <section id="diferenciais">
-            <h2 class="section-title">Garantia de Excelência</h2>
-            <p class="section-subtitle">A melhor experiência em cosméticos do pedido à entrega.</p>
-
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <h4>🚀 Envio Expresso</h4>
-                    <p>Postagem em até 24 horas úteis com rastreamento detalhado por e-mail e SMS.</p>
-                </div>
-                <div class="benefit-card">
-                    <h4>✨ 100% Cruelty-Free</h4>
-                    <p>Produtos não testados em animais e com ingredientes dermatologicamente testados.</p>
-                </div>
-                <div class="benefit-card">
-                    <h4>⚡ Pix Instantâneo</h4>
-                    <p>Desconto automático no checkout e aprovação imediata do seu pedido.</p>
-                </div>
-                <div class="benefit-card">
-                    <h4>👩‍🎤 Suporte VIP</h4>
-                    <p>Consultoras disponíveis no WhatsApp para auxiliar na escolha dos tons ideais.</p>
-                </div>
+        <section id="qualidade" class="benefits">
+            <div class="benefit-item">
+                <h4>🚀 Envio Rápido</h4>
+                <p>Receba em casa com embalagem personalizada em 24h.</p>
+            </div>
+            <div class="benefit-item">
+                <h4>🐰 Cruelty Free</h4>
+                <p>Nenhum de nossos produtos é testado em animais.</p>
+            </div>
+            <div class="benefit-item">
+                <h4>💎 Qualidade VIP</h4>
+                <p>Fórmulas de alta tecnologia e pigmentação extrema.</p>
             </div>
         </section>
 
-        <section id="pagamento" class="checkout-section">
-            
-            <div class="pix-box">
-                <h3 style="color: #FFB6C1; margin-bottom: 0.5rem;">💎 Pagamento via Pix</h3>
-                <p style="font-size: 0.85rem; color: #9E8C96;">Copie a chave Pix oficial para realizar o pagamento direto no seu banco:</p>
-                
-                <div class="pix-key">
-                    pix@valentinabeauty.com.br
-                </div>
-                
-                <p style="font-size: 0.75rem; color: #6E5E67;">Chave Pix E-mail oficial da Valentina Beauty Ltda.</p>
+        <section id="pagamento" class="checkout-box">
+            <div class="pix-container">
+                <h3>💎 Pagamento via Pix</h3>
+                <p>Use a chave abaixo e ganhe 5% OFF extra:</p>
+                <span class="pix-key">pix@valentinabeauty.com.br</span>
+                <p style="font-size: 0.7rem;">Liberação imediata do pedido!</p>
             </div>
 
-            <div class="whatsapp-box" id="contato">
-                <h3 style="color: #FFF; margin-bottom: 0.5rem;">📱 Atendimento VIP</h3>
-                <p style="font-size: 0.85rem; color: #9E8C96; margin-bottom: 1rem;">Dúvidas ou envio de comprovantes? Fale com a equipe:</p>
-                
-                <a href="https://wa.me/5511988887777" target="_blank" class="btn-whatsapp">
-                    Enviar Mensagem no WhatsApp
-                </a>
+            <div class="whatsapp-box" style="text-align: center;">
+                <h3>📲 Suporte Especializado</h3>
+                <p style="margin-bottom: 1rem;">Dúvidas sobre o tom da sua base? Fale com nossas maquiadoras:</p>
+                <a href="https://wa.me/5511988887777" target="_blank" class="whatsapp-btn">Conversar no WhatsApp</a>
             </div>
-
         </section>
 
     </div>
 
     <footer>
-        <p><strong>Valentina Beauty Ltda.</strong> | CNPJ: 42.109.876/0001-90</p>
-        <p>Av. Paulista, nº 246 - Bela Vista, São Paulo - SP | CEP 01310-000</p>
-        <p>© 2026 Todos os direitos reservados.</p>
+        <p><strong>Valentina Beauty Ltda. | CNPJ: 42.109.876/0001-90</strong></p>
+        <p>Av. Paulista, 246 - Bela Vista, São Paulo - SP</p>
+        <p>© 2026 Todos os direitos reservados. Sua beleza em primeiro lugar.</p>
     </footer>
 
 </body>
