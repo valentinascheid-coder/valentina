@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Valentina Beauty - Beleza e Estética</title>
+  <title>Valentina Beauty | Maquiagem Premium</title>
   <style>
     * {
       box-sizing: border-box;
@@ -11,166 +11,113 @@
       padding: 0;
     }
     body {
-      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      background-color: #050505;
-      color: #e1e4e8;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #FFFDF9;
+      color: #4A4A4A;
       line-height: 1.6;
     }
     header {
-      background: linear-gradient(180deg, #120305 0%, #050505 100%);
-      border-bottom: 2px solid #800020;
-      padding: 40px 20px;
+      background-color: #FAD2E1;
+      color: #5A4A42;
+      padding: 2.5rem 1rem;
       text-align: center;
     }
     header h1 {
-      color: #ffffff;
-      font-size: 36px;
-      font-weight: 800;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      text-shadow: 0 0 12px rgba(128, 0, 32, 0.6);
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
     }
-    header p {
-      color: #D4AF37;
-      font-size: 15px;
-      margin-top: 8px;
-      font-weight: 500;
-      letter-spacing: 1px;
-    }
-    .badge-elite {
-      display: inline-block;
-      background-color: rgba(128, 0, 32, 0.3);
-      color: #D4AF37;
-      border: 1px solid #D4AF37;
-      padding: 6px 18px;
-      border-radius: 25px;
-      font-size: 12px;
-      font-weight: bold;
-      margin-top: 15px;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-    }
-    .main-container {
-      max-width: 1200px;
-      margin: 45px auto;
-      padding: 0 15px;
-    }
-    .banner-section {
+    nav {
+      background-color: #FFF1C5;
+      padding: 0.8rem;
       text-align: center;
-      margin-bottom: 40px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
-    .banner-card {
-      background-color: #0d0d0d;
-      border: 1px solid #800020;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 10px 35px rgba(128, 0, 32, 0.35);
+    nav a {
+      color: #5A4A42;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
     }
-    .banner-card img {
-      width: 100%;
-      max-height: 450px;
-      object-fit: cover;
-      display: block;
+    .container {
+      padding: 2rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .loja-card {
+      background-color: #FFFFFF;
+      border: 2px solid #FAD2E1;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      text-align: center;
     }
     .grid-produtos {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-      justify-content: center;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
     }
     .card-produto {
-      background-color: #0a0a0c;
-      border: 1px solid #212125;
-      border-radius: 16px;
-      padding: 22px;
+      background: #FFFFFF;
+      border: 2px solid #FFF1C5;
+      border-radius: 12px;
+      padding: 1rem;
+      text-align: center;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.8);
     }
-    .card-produto:hover {
-      transform: translateY(-8px);
-      border-color: #800020;
-      box-shadow: 0 8px 30px rgba(128, 0, 32, 0.4);
-    }
-    .img-container {
+    .card-produto img {
       width: 100%;
-      height: 260px;
-      background-color: #030303;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 18px;
-      overflow: hidden;
-    }
-    .img-container img {
-      width: 100%;
-      height: 100%;
+      height: 200px;
       object-fit: cover;
-      border-radius: 12px;
-      transition: transform 0.4s ease;
+      border-radius: 8px;
+      margin-bottom: 10px;
     }
-    .card-produto:hover .img-container img {
-      transform: scale(1.05);
+    .tag {
+      background-color: #FAD2E1;
+      color: #D47A9D;
+      font-size: 0.75rem;
+      font-weight: bold;
+      padding: 3px 8px;
+      border-radius: 10px;
+      display: inline-block;
+      margin-bottom: 5px;
     }
-    .card-header h3 {
-      color: #ffffff;
-      font-size: 20px;
-      font-weight: 700;
+    .preco-de {
+      text-decoration: line-through;
+      color: #999;
+      font-size: 0.85rem;
     }
-    .card-header .categoria {
-      color: #D4AF37;
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-    }
-    .descricao-produto {
-      font-size: 13.5px;
-      color: #9ea7b0;
-      margin-bottom: 16px;
-      border-top: 1px solid #1a1a1e;
-      padding-top: 12px;
-    }
-    .preco-box {
-      margin-top: 10px;
-      border-top: 1px solid #1a1a1e;
-      padding-top: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .preco-box .valor {
-      color: #D4AF37;
-      font-size: 24px;
-      font-weight: 800;
-      text-shadow: 0 0 8px rgba(212, 175, 55, 0.25);
+    .preco-por {
+      color: #D47A9D;
+      font-size: 1.2rem;
+      font-weight: bold;
     }
     .btn-comprar {
-      background-color: #800020;
-      color: #ffffff;
-      border: none;
-      padding: 10px 20px;
-      font-size: 13px;
-      font-weight: 700;
-      border-radius: 8px;
-      cursor: pointer;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      text-decoration: none;
       display: inline-block;
+      background-color: #FFF1C5;
+      color: #5A4A42;
+      padding: 8px 15px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 10px;
     }
-    .btn-comprar:hover {
-      background-color: #a30029;
-      box-shadow: 0 0 15px rgba(128, 0, 32, 0.6);
+    .box-pix {
+      background-color: #FFF1C5;
+      padding: 1.5rem;
+      border-radius: 12px;
+      text-align: center;
+      margin-top: 2rem;
     }
     footer {
-      background-color: #020202;
-      border-top: 1px solid #1a1a1e;
-      padding: 45px 20px;
+      background-color: #FAD2E1;
+      color: #5A4A42;
       text-align: center;
-      margin-top: 60px;
+      padding: 1.5rem;
+      margin-top: 2rem;
     }
   </style>
 </head>
@@ -178,57 +125,72 @@
 
   <header>
     <h1>Valentina Beauty</h1>
-    <p>Beleza, Estética e Cuidados Especiais</p>
-    <div class="badge-elite">Coleção Exclusiva</div>
+    <p>Boutique de Maquiagem & Cosméticos de Alta Performance</p>
   </header>
 
-  <main class="main-container">
-    <section class="banner-section">
-      <div class="banner-card">
-        <img src="d964e30d516e2cc446cd1c8bcd4ca22f.jpg" alt="Banner Principal">
-      </div>
+  <nav>
+    <a href="#loja">Loja Física</a>
+    <a href="#produtos">Produtos</a>
+    <a href="#pagamento">Pagamento Pix</a>
+  </nav>
+
+  <div class="container">
+
+    <section id="loja" class="loja-card">
+      <h2>📍 Nossa Loja Presencial</h2>
+      <p><strong>Endereço:</strong> Av. Paulista, nº 246 - São Paulo / SP</p>
+      <p>Venha testar nossos produtos no nosso camarim iluminado!</p>
     </section>
 
-    <section class="grid-produtos">
-      <div class="card-produto">
-        <div>
-          <div class="img-container">
-            <img src="pai411c2eee6e76f02c55700efb4df2f.jpg" alt="Glossy Bubble Oil">
-          </div>
-          <div class="card-header">
-            <span class="categoria">Lábios</span>
-            <h3>Glossy Bubble Oil</h3>
-          </div>
-          <p class="descricao-produto">Hidratação profunda e brilho intenso para os lábios com acabamento radiante.</p>
-        </div>
-        <div class="preco-box">
-          <span class="valor">R$ 59,90</span>
-          <a href="#" class="btn-comprar">Comprar</a>
-        </div>
-      </div>
+    <h2 style="text-align: center; margin-bottom: 1.5rem;" id="produtos">Produtos em Destaque</h2>
+
+    <div class="grid-produtos">
 
       <div class="card-produto">
         <div>
-          <div class="img-container">
-            <img src="d64295ce53f6af3c56e5c5bf8f70097.jpg" alt="Pincéis de Maquiagem">
-          </div>
-          <div class="card-header">
-            <span class="categoria">Acessórios</span>
-            <h3>Kit Pincéis Elegance</h3>
-          </div>
-          <p class="descricao-produto">Conjunto completo de pincéis com cerdas macias para uma aplicação perfeita.</p>
+          <img src="https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=500" alt="Batom Gloss">
+          <span class="tag">15% OFF</span>
+          <h3>Lip Gloss Hydrating</h3>
+          <p>Hidratação profunda e brilho espelhado.</p>
         </div>
-        <div class="preco-box">
-          <span class="valor">R$ 89,90</span>
-          <a href="#" class="btn-comprar">Comprar</a>
+        <div>
+          <p class="preco-de">R$ 89,90</p>
+          <p class="preco-por">R$ 76,40</p>
+          <a href="#pagamento" class="btn-comprar">Comprar</a>
         </div>
       </div>
-    </section>
-  </main>
 
-  <footer>
-    <p>&copy; 2026 Valentina Beauty - Todos os direitos reservados.</p>
-  </footer>
+      <div class="card-produto">
+        <div>
+          <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=500" alt="Paleta de Sombras">
+          <span class="tag">20% OFF</span>
+          <h3>Paleta Nude Glow</h3>
+          <p>Sombras ultra pigmentadas e aveludadas.</p>
+        </div>
+        <div>
+          <p class="preco-de">R$ 149,00</p>
+          <p class="preco-por">R$ 119,20</p>
+          <a href="#pagamento" class="btn-comprar">Comprar</a>
+        </div>
+      </div>
 
-</body>
-</html>
+      <div class="card-produto">
+        <div>
+          <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=500" alt="Pincéis">
+          <span class="tag">10% OFF</span>
+          <h3>Kit Pincéis Soft Touch</h3>
+          <p>Cerdas macias sintéticas de alta precisão.</p>
+        </div>
+        <div>
+          <p class="preco-de">R$ 159,90</p>
+          <p class="preco-por">R$ 143,90</p>
+          <a href="#pagamento" class="btn-comprar">Comprar</a>
+        </div>
+      </div>
+
+    </div>
+
+    <section id="pagamento" class="box-pix">
+      <h2>💎 Pagamento via Pix</h2>
+      <p>Chave Pix E-mail: <strong>pix@valentinabeauty.com.br</strong></p>
+      <p>
