@@ -71,9 +71,9 @@
         nav a {
             text-decoration: none;
             color: var(--texto-premium);
-            margin: 0 15px;
+            margin: 0 12px;
             font-weight: 700;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             transition: 0.3s;
         }
 
@@ -87,20 +87,66 @@
             padding: 3rem 1.5rem;
         }
 
-        .store-card {
+        /* SEÇÃO DE DICAS EXCLUSIVA */
+        .tips-section {
             background-color: var(--branco-puro);
             border: 3px solid var(--rosa-bebe);
             border-radius: 30px;
-            padding: 3rem;
-            text-align: center;
+            padding: 3rem 2rem;
             margin-bottom: 4rem;
             box-shadow: 0 10px 30px rgba(250, 210, 225, 0.3);
+        }
+
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+            margin-top: 2rem;
+        }
+
+        .tip-card {
+            background-color: var(--fundo-suave);
+            border: 2px solid var(--amarelo-pastel);
+            border-radius: 20px;
+            padding: 1.8rem;
+            transition: 0.3s;
+        }
+
+        .tip-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--rosa-bebe);
+        }
+
+        .tip-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .tip-card h3 {
+            font-size: 1.1rem;
+            color: #D47A9D;
+            margin-bottom: 0.8rem;
+        }
+
+        .tip-card p {
+            font-size: 0.88rem;
+            color: #666;
+        }
+
+        .store-card {
+            background-color: var(--branco-puro);
+            border: 3px solid var(--amarelo-pastel);
+            border-radius: 30px;
+            padding: 2.5rem;
+            text-align: center;
+            margin-bottom: 4rem;
         }
 
         .store-card h2 {
             font-family: 'Playfair Display', serif;
             font-size: 2rem;
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem;
         }
 
         .section-title {
@@ -284,18 +330,44 @@
     </header>
 
     <nav>
-        <a href="#loja">Loja Paulista</a>
+        <a href="#dicas">Dicas de Make</a>
         <a href="#colecao">Nossa Coleção</a>
+        <a href="#loja">Loja Paulista</a>
         <a href="#qualidade">Qualidade</a>
         <a href="#pagamento">Pagamento Pix</a>
     </nav>
 
     <div class="container">
 
-        <section id="loja" class="store-card">
-            <h2>📍 Experiência Presencial</h2>
-            <p><strong>Avenida Paulista, 246 - São Paulo, SP</strong></p>
-            <p>Venha descobrir sua melhor versão em nosso camarim exclusivo com maquiadoras profissionais e atendimento VIP.</p>
+        <section id="dicas" class="tips-section">
+            <h2 class="section-title">💡 Diquinhas de Ouro</h2>
+            <p style="text-align: center; color: #777;">Segredos indispensáveis para sua make durar o dia todo e ficar impecável!</p>
+
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <span class="tip-icon">💧</span>
+                    <h3>Pele Bem Hidratada</h3>
+                    <p>O segredo de uma base perfeita é a preparação! Hidrate bem a pele antes de aplicar qualquer maquiagem para evitar que a base craquele.</p>
+                </div>
+
+                <div class="tip-card">
+                    <span class="tip-icon">✨</span>
+                    <h3>Efeito Lip Combo</h3>
+                    <p>Contorne os lábios com um lápis um tom mais escuro que seu batom e finalize com o nosso <strong>Glossy Bubble Oil</strong> no centro para dar um volume incrível!</p>
+                </div>
+
+                <div class="tip-card">
+                    <span class="tip-icon">👁️</span>
+                    <h3>Pigmentação Máxima</h3>
+                    <p>Aplique um pouco de corretivo nas pálpebras antes da sombra. Isso faz a cor da paleta ficar 2x mais intensa e durar muito mais tempo sem borratar.</p>
+                </div>
+
+                <div class="tip-card">
+                    <span class="tip-icon">🖌️</span>
+                    <h3>Durabilidade dos Pincéis</h3>
+                    <p>Lave seus pincéis com shampoo neutro a cada 15 dias. Pincéis limpos garantem uma aplicação muito mais uniforme e protegem a pele de bactérias.</p>
+                </div>
+            </div>
         </section>
 
         <section id="colecao">
@@ -363,6 +435,12 @@
                 </div>
 
             </div>
+        </section>
+
+        <section id="loja" class="store-card">
+            <h2>📍 Experiência Presencial</h2>
+            <p><strong>Avenida Paulista, 246 - São Paulo, SP</strong></p>
+            <p>Venha descobrir sua melhor versão em nosso camarim exclusivo com maquiadoras profissionais e atendimento VIP.</p>
         </section>
 
         <section id="qualidade" class="benefits">
