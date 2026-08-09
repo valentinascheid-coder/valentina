@@ -3,190 +3,520 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mundo da Maquiagem | Dicas e Tendências</title>
+    <title>Valentina Beauty | Luxe Makeup Boutique</title>
     <style>
-        /* Um toque simples de estilo para começar */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* ==========================================================================
+           RESET & ESSENTIAL STYLES
+           ========================================================================== */
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            background-color: #fcf8f8;
-            color: #333;
         }
+
+        body {
+            font-family: 'Poppins', 'Segoe UI', BlinkMacSystemFont, sans-serif;
+            background-color: #0D0B0E;
+            color: #F4EAEF;
+            line-height: 1.6;
+        }
+
+        /* ==========================================================================
+           NOTIFICATION TOP BAR
+           ========================================================================== */
+        .top-bar {
+            background: linear-gradient(90deg, #FFB6C1, #FFE4E1, #FFB6C1);
+            color: #2A0813;
+            text-align: center;
+            padding: 10px 15px;
+            font-size: 0.85rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* ==========================================================================
+           HEADER & HERO
+           ========================================================================== */
         header {
-            background-color: #f4acb7;
-            color: white;
-            padding: 2rem;
+            background: radial-gradient(circle, #2A081A 0%, #0D0B0E 100%);
+            border-bottom: 1px solid rgba(255, 182, 193, 0.2);
+            padding: 3.5rem 1.5rem;
             text-align: center;
         }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            background: linear-gradient(135deg, #FFF, #FFB6C1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: #D8B4C8;
+            font-weight: 300;
+        }
+
+        .badge-vip {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 6px 20px;
+            border-radius: 30px;
+            background: rgba(255, 182, 193, 0.1);
+            border: 1px solid #FFB6C1;
+            color: #FFB6C1;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* ==========================================================================
+           NAVIGATION BAR
+           ========================================================================== */
         nav {
-            background-color: #9d8189;
-            padding: 0.5rem;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .container {
-            padding: 2rem;
-            max-width: 800px;
-            margin: auto;
-        }
-        .card {
-            background: white;
-            padding: 1.5rem;
-            margin-bottom: 1rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        footer {
-            text-align: center;
+            background-color: #161218;
             padding: 1rem;
-            background-color: #f4acb7;
-            color: white;
-            margin-top: 2rem;
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <h1>Glow & Style</h1>
-        <p>Seu guia diário de maquiagem, truques e produtos favoritos!</p>
-    </header>
-
-    <nav>
-        <a href="#sobre">Sobre</a>
-        <a href="#dicas">Dicas</a>
-        <a href="#produtos">Favoritos</a>
-    </nav>
-
-    <div class="container">
-        <section id="sobre" class="card">
-            <h2>Bem-vinda(o)!</h2>
-            <p>Este espaço foi criado para compartilhar o amor pela arte da maquiagem, desde o básico do dia a dia até produções mais elaboradas.</p>
-        </section>
-
-        <section id="dicas" class="card">
-            <h2>Dicas Rápidas</h2>
-            <ul>
-                <li><strong>Prepara a pele:</strong> Hidratação é a chave para uma base perfeita.</li>
-                <li><strong>Protetor solar sempre:</strong> Antes de qualquer maquiagem durante o dia!</li>
-                <li><strong>Esfumar é o segredo:</strong> Transições suaves deixam qualquer sombra incrível.</li>
-            </ul>
-        </section>
-    </div>
-
-    <footer>
-        <p>&copy; 2026 - Criado com carinho no GitHub Pages</p>
-    </footer>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mundo da Maquiagem | Loja & Dicas</title>
-    <style>
-        /* Paleta: Rosa Bebê (#FAD2E1) e Amarelo Pastel (#FFF1E6 / #FDE2E4) */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #FFFDF9; /* Fundo suave */
-            color: #4A4A4A;
-        }
-        header {
-            background-color: #FAD2E1; /* Rosa bebê */
-            color: #5A4A42;
-            padding: 2.5rem 1rem;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
-        nav {
-            background-color: #FFF1C5; /* Amarelo pastel */
-            padding: 0.8rem;
-            text-align: center;
-        }
+
         nav a {
-            color: #5A4A42;
-            margin: 0 15px;
+            color: #D8B4C8;
+            margin: 0 12px;
             text-decoration: none;
-            font-weight: bold;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
         }
+
         nav a:hover {
-            color: #D47A9D;
+            color: #FFB6C1;
+            text-shadow: 0 0 10px rgba(255, 182, 193, 0.5);
         }
+
+        /* ==========================================================================
+           MAIN CONTAINER
+           ========================================================================== */
         .container {
-            padding: 2rem 1rem;
-            max-width: 800px;
-            margin: auto;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
         }
-        .card {
-            background: #FFFFFF;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            border-radius: 12px;
-            border: 2px solid #FFF1C5; /* Detalhe em amarelo pastel */
-            box-shadow: 0 4px 6px rgba(0,0,0,0.03);
+
+        /* STORE LOCATION CARD */
+        .location-card {
+            background: linear-gradient(145deg, #18131B, #120E15);
+            border: 1px solid rgba(255, 182, 193, 0.2);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin-bottom: 4rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         }
-        .loja-destaque {
-            background-color: #FAD2E1; /* Card em rosa bebê */
-            border: none;
-            color: #5A4A42;
+
+        .location-card h2 {
+            color: #FFB6C1;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
         }
-        footer {
+
+        .location-card p {
+            color: #C2B2BC;
+            margin-bottom: 0.8rem;
+        }
+
+        /* SECTION TITLES */
+        .section-title {
             text-align: center;
+            font-size: 2.2rem;
+            color: #FFF;
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #8E7A86;
+            font-size: 0.95rem;
+            margin-bottom: 3rem;
+        }
+
+        /* ==========================================================================
+           PRODUCTS GRID
+           ========================================================================== */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-bottom: 4rem;
+        }
+
+        .product-card {
+            background: #161218;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 18px;
             padding: 1.5rem;
-            background-color: #FAD2E1;
-            color: #5A4A42;
-            margin-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-7px);
+            border-color: #FFB6C1;
+            box-shadow: 0 10px 25px rgba(255, 182, 193, 0.15);
+        }
+
+        .discount-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #FFB6C1;
+            color: #161218;
+            font-weight: 800;
+            font-size: 0.7rem;
+            padding: 4px 10px;
+            border-radius: 10px;
+        }
+
+        .product-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 1.2rem;
+        }
+
+        .product-category {
+            font-size: 0.75rem;
+            color: #FFB6C1;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: block;
+            margin-bottom: 0.4rem;
+        }
+
+        .product-card h3 {
+            font-size: 1.1rem;
+            color: #FFF;
+            margin-bottom: 0.6rem;
+        }
+
+        .product-description {
+            font-size: 0.85rem;
+            color: #9E8C96;
+            margin-bottom: 1.2rem;
+        }
+
+        .price-box {
+            margin-top: auto;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .price-old {
+            font-size: 0.8rem;
+            color: #6E5E67;
+            text-decoration: line-through;
+            display: block;
+        }
+
+        .price-current {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #FFB6C1;
+        }
+
+        .btn-buy {
+            background: linear-gradient(135deg, #FFB6C1, #FFA0B4);
+            color: #161218;
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-weight: 800;
+            font-size: 0.8rem;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .btn-buy:hover {
+            opacity: 0.9;
+        }
+
+        /* ==========================================================================
+           BENEFITS / QUALITY SECTION
+           ========================================================================== */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-bottom: 4rem;
+        }
+
+        .benefit-card {
+            background-color: #120E15;
+            border: 1px solid rgba(255, 182, 193, 0.1);
+            border-radius: 15px;
+            padding: 1.8rem 1.2rem;
+            text-align: center;
+        }
+
+        .benefit-card h4 {
+            color: #FFB6C1;
+            margin-bottom: 0.5rem;
+            font-size: 1.05rem;
+        }
+
+        .benefit-card p {
+            font-size: 0.85rem;
+            color: #8E7A86;
+        }
+
+        /* ==========================================================================
+           PAYMENT & CONTACT SECTION
+           ========================================================================== */
+        .checkout-section {
+            background: #161218;
+            border: 1px solid rgba(255, 182, 193, 0.2);
+            border-radius: 20px;
+            padding: 2.5rem 2rem;
+            margin-bottom: 3rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .pix-box {
+            background-color: #0D0B0E;
+            border: 1px solid rgba(255, 182, 193, 0.15);
+            border-radius: 14px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .pix-key {
+            background: rgba(255, 182, 193, 0.1);
+            color: #FFB6C1;
+            border: 1px dashed #FFB6C1;
+            padding: 10px;
+            border-radius: 8px;
+            font-weight: 800;
+            font-size: 0.95rem;
+            margin: 12px 0;
+            word-break: break-all;
+        }
+
+        .whatsapp-box {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn-whatsapp {
+            display: inline-block;
+            background-color: #25D366;
+            color: #FFFFFF;
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-weight: 800;
+            text-decoration: none;
+            font-size: 0.95rem;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.2);
+            margin-top: 10px;
+        }
+
+        /* ==========================================================================
+           FOOTER
+           ========================================================================== */
+        footer {
+            background-color: #080608;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: #6E5E67;
+            text-align: center;
+            padding: 2.5rem 1rem;
+            font-size: 0.85rem;
+        }
+
+        footer strong {
+            color: #9E8C96;
         }
     </style>
 </head>
 <body>
 
+    <div class="top-bar">
+        💎 FRETE GRÁTIS EM COMPRAS ACIMA DE R$ 199 | 5% DE DESCONTO EXCLUSIVO VIA PIX 💎
+    </div>
+
     <header>
-        <h1>Glow & Style</h1>
-        <p>Seu espaço de beleza, maquiagem e cuidados!</p>
+        <h1>Valentina Beauty</h1>
+        <p>Boutique de Alta Maquiagem & Cosméticos de Luxo</p>
+        <span class="badge-vip">Flagship Store & Online Boutique</span>
     </header>
 
     <nav>
-        <a href="#loja">Loja Presencial</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#dicas">Dicas</a>
+        <a href="#loja">Loja Física</a>
+        <a href="#produtos">Coleção</a>
+        <a href="#diferenciais">Qualidade</a>
+        <a href="#pagamento">Pagamento Pix</a>
+        <a href="#contato">WhatsApp VIP</a>
     </nav>
 
     <div class="container">
-        
-        <section id="loja" class="card loja-destaque">
-            <h2>📍 Nossa Loja Física</h2>
-            <p>Venha nos visitar, testar os produtos e bater um papo sobre maquiagem!</p>
-            <p><strong>Endereço:</strong> Av. Paulista, 246 - São Paulo / SP</p>
+
+        <section id="loja" class="location-card">
+            <h2>📍 Valentina Beauty Flagship</h2>
+            <p><strong>Endereço:</strong> Av. Paulista, nº 246 - Cerqueira César, São Paulo - SP</p>
+
+            <p>Atendimento exclusivo com maquiadoras profissionais, bancadas iluminadas e teste de produtos no camarim presencial.</p>
         </section>
 
-        <section id="sobre" class="card">
-            <h2>Bem-vinda(o)!</h2>
-            <p>Este espaço foi criado para compartilhar o amor pela arte da maquiagem, desde o básico do dia a dia até produções mais elaboradas.</p>
+        <section id="produtos">
+            <h2 class="section-title">Coleção em Destaque</h2>
+            <p class="section-subtitle">Alta pigmentação, tecnologia de fixação e fórmulas cruelty-free.</p>
+
+            <div class="products-grid">
+
+                <div class="product-card">
+                    <span class="discount-badge">15% OFF</span>
+                    <img src="https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=500" alt="Lip Gloss Valentina" class="product-img">
+                    <div>
+                        <span class="product-category">Lábios & Nutrição</span>
+                        <h3>Glossy Lip Oil Hydrating</h3>
+                        <p class="product-description">Fórmula rica em ácido hialurônico para hidratação e brilho espelhado de longa duração.</p>
+                    </div>
+                    <div class="price-box">
+                        <div>
+                            <span class="price-old">R$ 89,90</span>
+                            <span class="price-current">R$ 76,40</span>
+                        </div>
+                        <a href="#pagamento" class="btn-buy">Comprar</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <span class="discount-badge">20% OFF</span>
+                    <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=500" alt="Paleta de Sombras" class="product-img">
+                    <div>
+                        <span class="product-category">Olhos & Glow</span>
+                        <h3>Paleta Nude Glam Edition</h3>
+                        <p class="product-description">12 sombras aveludadas ultra pigmentadas com acabamento matte e glitter prensado.</p>
+                    </div>
+                    <div class="price-box">
+                        <div>
+                            <span class="price-old">R$ 249,00</span>
+                            <span class="price-current">R$ 199,20</span>
+                        </div>
+                        <a href="#pagamento" class="btn-buy">Comprar</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <span class="discount-badge">10% OFF</span>
+                    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=500" alt="Kit de Pincéis" class="product-img">
+                    <div>
+                        <span class="product-category">Acessórios VIP</span>
+                        <h3>Kit Pincéis Velvet Touch</h3>
+                        <p class="product-description">Conjunto com 8 pincéis profissionais de cerdas sintéticas ultra macias e acabamento metálico.</p>
+                    </div>
+                    <div class="price-box">
+                        <div>
+                            <span class="price-old">R$ 159,90</span>
+                            <span class="price-current">R$ 143,90</span>
+                        </div>
+                        <a href="#pagamento" class="btn-buy">Comprar</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <span class="discount-badge">LANÇAMENTO</span>
+                    <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=500" alt="Iluminador Facial" class="product-img">
+                    <div>
+                        <span class="product-category">Pele & Brilho</span>
+                        <h3>Iluminador Liquid Glow</h3>
+                        <p class="product-description">Gotas iluminadoras de alta fusão que conferem um viço natural e radiante à pele.</p>
+                    </div>
+                    <div class="price-box">
+                        <div>
+                            <span class="price-old">R$ 119,90</span>
+                            <span class="price-current">R$ 99,90</span>
+                        </div>
+                        <a href="#pagamento" class="btn-buy">Comprar</a>
+                    </div>
+                </div>
+
+            </div>
         </section>
 
-        <section id="dicas" class="card">
-            <h2>Dicas Rápidas</h2>
-            <ul>
-                <li><strong>Pele bem cuidada:</strong> A hidratação é o segredo para o acabamento perfeito.</li>
-                <li><strong>Protetor solar:</strong> Indispensável antes da maquiagem no dia a dia.</li>
-                <li><strong>Esfumar:</strong> Garante transições suaves e um visual profissional.</li>
-            </ul>
+        <section id="diferenciais">
+            <h2 class="section-title">Garantia de Excelência</h2>
+            <p class="section-subtitle">A melhor experiência em cosméticos do pedido à entrega.</p>
+
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h4>🚀 Envio Expresso</h4>
+                    <p>Postagem em até 24 horas úteis com rastreamento detalhado por e-mail e SMS.</p>
+                </div>
+                <div class="benefit-card">
+                    <h4>✨ 100% Cruelty-Free</h4>
+                    <p>Produtos não testados em animais e com ingredientes dermatologicamente testados.</p>
+                </div>
+                <div class="benefit-card">
+                    <h4>⚡ Pix Instantâneo</h4>
+                    <p>Desconto automático no checkout e aprovação imediata do seu pedido.</p>
+                </div>
+                <div class="benefit-card">
+                    <h4>👩‍🎤 Suporte VIP</h4>
+                    <p>Consultoras disponíveis no WhatsApp para auxiliar na escolha dos tons ideais.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="pagamento" class="checkout-section">
+            
+            <div class="pix-box">
+                <h3 style="color: #FFB6C1; margin-bottom: 0.5rem;">💎 Pagamento via Pix</h3>
+                <p style="font-size: 0.85rem; color: #9E8C96;">Copie a chave Pix oficial para realizar o pagamento direto no seu banco:</p>
+                
+                <div class="pix-key">
+                    pix@valentinabeauty.com.br
+                </div>
+                
+                <p style="font-size: 0.75rem; color: #6E5E67;">Chave Pix E-mail oficial da Valentina Beauty Ltda.</p>
+            </div>
+
+            <div class="whatsapp-box" id="contato">
+                <h3 style="color: #FFF; margin-bottom: 0.5rem;">📱 Atendimento VIP</h3>
+                <p style="font-size: 0.85rem; color: #9E8C96; margin-bottom: 1rem;">Dúvidas ou envio de comprovantes? Fale com a equipe:</p>
+                
+                <a href="https://wa.me/5511988887777" target="_blank" class="btn-whatsapp">
+                    Enviar Mensagem no WhatsApp
+                </a>
+            </div>
+
         </section>
 
     </div>
 
     <footer>
-        <p>&copy; 2026 Glow & Style | Av. Paulista, 246 - SP</p>
+        <p><strong>Valentina Beauty Ltda.</strong> | CNPJ: 42.109.876/0001-90</p>
+        <p>Av. Paulista, nº 246 - Bela Vista, São Paulo - SP | CEP 01310-000</p>
+        <p>© 2026 Todos os direitos reservados.</p>
     </footer>
 
 </body>
