@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elite Beauty - Luxo Vermelho & Dourado</title>
+    <title>Valentina Beauty - Beauty & Aesthetic</title>
     
     <style>
         * {
@@ -13,16 +13,16 @@
         }
 
         body {
-            font-family: 'Playfair Display', 'Segoe UI', serif;
-            background-color: #08090a;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #050505;
             color: #e1e4e8;
             line-height: 1.6;
         }
 
-        /* CABECALHO RED & GOLD */
+        /* CABEÇALHO JOVEM & CHIC */
         header {
-            background: linear-gradient(180deg, #161b22 0%, #08090a 100%);
-            border-bottom: 2px solid #E60023; /* Vermelho */
+            background: linear-gradient(180deg, #120305 0%, #050505 100%);
+            border-bottom: 2px solid #800020;
             padding: 40px 20px;
             text-align: center;
         }
@@ -33,63 +33,64 @@
             font-weight: 800;
             letter-spacing: 2px;
             text-transform: uppercase;
-            text-shadow: 0 0 10px rgba(230, 0, 35, 0.4);
+            text-shadow: 0 0 12px rgba(128, 0, 32, 0.6);
         }
 
         header p {
-            color: #D4AF37; /* Dourado */
-            font-size: 16px;
-            margin-top: 5px;
-            font-style: italic;
+            color: #D4AF37;
+            font-size: 15px;
+            margin-top: 8px;
+            font-weight: 500;
+            letter-spacing: 1px;
         }
 
         .badge-elite {
             display: inline-block;
-            background-color: rgba(230, 0, 35, 0.15);
+            background-color: rgba(128, 0, 32, 0.3);
             color: #D4AF37;
             border: 1px solid #D4AF37;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 13px;
+            padding: 6px 18px;
+            border-radius: 25px;
+            font-size: 12px;
             font-weight: bold;
             margin-top: 15px;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
         }
 
         /* BANNER PRINCIPAL */
         .banner-section {
             max-width: 1200px;
-            margin: 20px auto;
+            margin: 25px auto;
             padding: 0 15px;
         }
 
         .banner-card {
-            background-color: #161b22;
-            border: 1px solid #E60023;
+            background-color: #0d0d0d;
+            border: 1px solid #800020;
             border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(230, 0, 35, 0.25);
+            box-shadow: 0 10px 35px rgba(128, 0, 32, 0.35);
             text-align: center;
         }
 
         .banner-card img {
             width: 100%;
-            max-height: 400px;
+            max-height: 450px;
             object-fit: cover;
             display: block;
         }
 
-        /* CONTAINER PRINCIPAL DE PRODUTOS */
+        /* CONTAINER DE PRODUTOS */
         main {
             max-width: 1200px;
-            margin: 50px auto;
+            margin: 45px auto;
             padding: 0 15px;
         }
 
         .section-title {
             text-align: center;
-            font-size: 28px;
+            font-size: 26px;
             color: #ffffff;
             margin-bottom: 40px;
             text-transform: uppercase;
@@ -102,79 +103,85 @@
             display: block;
             width: 80px;
             height: 3px;
-            background-color: #D4AF37; /* Linha Dourada */
-            margin: 15px auto 0;
+            background-color: #D4AF37;
+            margin: 12px auto 0;
             border-radius: 2px;
-            box-shadow: 0 0 8px #D4AF37;
+            box-shadow: 0 0 10px #D4AF37;
         }
 
         /* GRADE DE PRODUTOS */
         .grid-produtos {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
             justify-content: center;
         }
 
-        /* CARTAO DO PRODUTO */
+        /* CARD DE PRODUTO */
         .card-produto {
-            background-color: #111418;
-            border: 1px solid #30363d;
-            border-radius: 14px;
-            padding: 25px;
+            background-color: #0a0a0c;
+            border: 1px solid #212125;
+            border-radius: 16px;
+            padding: 22px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+            box-shadow: 0 5px 25px rgba(0,0,0,0.8);
         }
 
         .card-produto:hover {
             transform: translateY(-8px);
-            border-color: #E60023;
-            box-shadow: 0 5px 25px rgba(230, 0, 35, 0.3);
+            border-color: #800020;
+            box-shadow: 0 8px 30px rgba(128, 0, 32, 0.4);
         }
 
         .img-container {
             width: 100%;
-            height: 220px;
-            background-color: #08090a;
-            border-radius: 10px;
+            height: 260px;
+            background-color: #030303;
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
             margin-bottom: 18px;
-            padding: 15px;
+            overflow: hidden;
         }
 
         .img-container img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+            transition: transform 0.4s ease;
+        }
+
+        .card-produto:hover .img-container img {
+            transform: scale(1.05);
         }
 
         .card-header {
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
         .card-header h3 {
             color: #ffffff;
-            font-size: 22px;
+            font-size: 20px;
             font-weight: 700;
         }
 
         .card-header .categoria {
             color: #D4AF37;
-            font-size: 13px;
+            font-size: 12px;
             text-transform: uppercase;
             letter-spacing: 1.5px;
         }
 
-        /* TAGS INFORMATIVAS */
+        /* TAGS DE ESTILO JOVEM */
         .tags-container {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
+            gap: 6px;
             margin: 12px 0;
         }
 
@@ -183,34 +190,41 @@
             font-weight: 600;
             padding: 4px 10px;
             border-radius: 6px;
-            background-color: #1c1d22;
-            border: 1px solid #30363d;
+            background-color: #141418;
+            border: 1px solid #2a2a30;
         }
 
-        .tag.red { color: #E60023; border-color: rgba(230,0,35,0.4); }
+        .tag.red { color: #ff3355; border-color: rgba(255,51,85,0.4); }
         .tag.gold { color: #D4AF37; border-color: rgba(212,175,55,0.4); }
+        .tag.green { color: #2ea44f; border-color: rgba(46,164,79,0.4); }
 
         .descricao-produto {
-            font-size: 14px;
-            color: #8b949e;
-            margin-bottom: 18px;
-            border-top: 1px solid #21262d;
+            font-size: 13.5px;
+            color: #9ea7b0;
+            margin-bottom: 16px;
+            border-top: 1px solid #1a1a1e;
             padding-top: 12px;
         }
 
+        /* LISTA DE ESPECIFICAÇÕES */
         .especificacoes-lista {
             list-style: none;
-            font-size: 13px;
+            font-size: 12.5px;
             margin-bottom: 18px;
-            background-color: #08090a;
+            background-color: #040405;
             padding: 12px;
             border-radius: 8px;
+            border: 1px solid #141418;
         }
 
         .especificacoes-lista li {
-            margin-bottom: 5px;
+            margin-bottom: 6px;
             display: flex;
             justify-content: space-between;
+        }
+
+        .especificacoes-lista li:last-child {
+            margin-bottom: 0;
         }
 
         .especificacoes-lista li span {
@@ -218,213 +232,48 @@
         }
 
         .especificacoes-lista li strong {
-            color: #c9d1d9;
+            color: #d1d5da;
         }
 
-        /* PRECO E BOTAO */
+        /* PREÇO E BOTAO */
         .preco-box {
-            margin-top: 15px;
-            border-top: 1px solid #21262d;
-            padding-top: 18px;
+            margin-top: 10px;
+            border-top: 1px solid #1a1a1e;
+            padding-top: 16px;
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
 
         .preco-box .valor {
-            color: #D4AF37; /* Preço Dourado */
+            color: #D4AF37;
             font-size: 24px;
             font-weight: 800;
-            text-shadow: 0 0 8px rgba(212, 175, 55, 0.2);
+            text-shadow: 0 0 8px rgba(212, 175, 55, 0.25);
         }
 
         .btn-comprar {
-            background-color: #E60023; /* Botão Vermelho */
+            background-color: #800020;
             color: #ffffff;
             border: none;
-            padding: 12px 20px;
-            font-size: 15px;
+            padding: 10px 20px;
+            font-size: 13px;
             font-weight: 700;
             border-radius: 8px;
             cursor: pointer;
             transition: background-color 0.2s, box-shadow 0.2s;
             text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .btn-comprar:hover {
-            background-color: #b3001b;
-            box-shadow: 0 0 15px rgba(230, 0, 35, 0.5);
+            background-color: #a30029;
+            box-shadow: 0 0 15px rgba(128, 0, 32, 0.6);
         }
 
-        /* RODAPE RED & GOLD */
+        /* RODAPÉ COM CONTATO VIP */
         footer {
-            background-color: #030405;
-            border-top: 1px solid #21262d;
-            padding: 50px 20px;
+            background-color: #020202;
+            border-top: 1px solid #1a1a1e;
+            padding: 45px 20px;
             text-align: center;
-            font-size: 14px;
-            color: #8b949e;
-            margin-top: 50px;
-        }
-
-        footer strong {
-            color: #ffffff;
-        }
-
-        .contato-whatsapp {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            background-color: #111418;
-            border: 1px solid #D4AF37;
-            padding: 10px 20px;
-            border-radius: 30px;
-            color: #ffffff;
-            font-weight: 600;
-            margin-top: 15px;
-            text-decoration: none;
-        }
-
-        .contato-whatsapp img {
-            width: 24px;
-            height: 24px;
-            object-fit: contain;
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <h1>Elite Beauty</h1>
-        <p>Alta Cordoaria & Elegância em Maquiagem</p>
-        <div class="badge-elite">✨ Coleção Red & Gold Luxury</div>
-    </header>
-
-    <section class="banner-section">
-        <div class="banner-card">
-            <img src="NOME_DO_BANNER.jpg" alt="Banner Elite Beauty">
-        </div>
-    </section>
-
-    <main>
-        <h2 class="section-title">Edição Especial Red Luxury</h2>
-        
-        <div class="grid-produtos">
-            
-            <article class="card-produto">
-                <div>
-                    <div class="img-container">
-                        <img src="NOME_DO_BATOM.jpg" alt="Batom Red Velvet Gold Edition">
-                    </div>
-                    <div class="card-header">
-                        <span class="categoria">Lábios</span>
-                        <h3>Batom Red Velvet Gold</h3>
-                    </div>
-
-                    <div class="tags-container">
-                        <span class="tag red">💄 Vermelho Intenso</span>
-                        <span class="tag gold">✨ Embalagem Dourada</span>
-                        <span class="tag red">⏳ Duração 12h</span>
-                    </div>
-
-                    <p class="descricao-produto">
-                        Vermelho vivo clássico com acabamento aveludado e detalhes em ouro na embalagem. Alta pigmentação sem ressecar.
-                    </p>
-
-                    <ul class="especificacoes-lista">
-                        <li><span>Acabamento:</span> <strong>Matte Velvet</strong></li>
-                        <li><span>Transferência?</span> <strong>Mínima</strong></li>
-                        <li><span>Textura:</span> <strong>Cremosa e Leve</strong></li>
-                        <li><span>Efeito:</span> <strong>Lábios Marcantes</strong></li>
-                    </ul>
-                </div>
-
-                <div class="preco-box">
-                    <span class="valor">R$ 159,00</span>
-                    <button class="btn-comprar">Comprar</button>
-                </div>
-            </article>
-
-            <article class="card-produto">
-                <div>
-                    <div class="img-container">
-                        <img src="NOME_DA_PALETA.jpg" alt="Paleta Royal Red Gold">
-                    </div>
-                    <div class="card-header">
-                        <span class="categoria">Olhos</span>
-                        <h3>Paleta Sombras Royal Red & Gold</h3>
-                    </div>
-
-                    <div class="tags-container">
-                        <span class="tag gold">✨ Tons Quentes & Dourados</span>
-                        <span class="tag red">👑 Alta Fixação</span>
-                    </div>
-
-                    <p class="descricao-produto">
-                        Sombras ultra pigmentadas variando entre tons terrosos, vermelhos nobres e dourados radiantes.
-                    </p>
-
-                    <ul class="especificacoes-lista">
-                        <li><span>Pigmentação:</span> <strong>Alta Performance</strong></li>
-                        <li><span>Cores:</span> <strong>18 Sombras Exclusivas</strong></li>
-                        <li><span>Efeito:</span> <strong>Matte & Cintilante</strong></li>
-                        <li><span>Duração:</span> <strong>Resiste ao dia todo</strong></li>
-                    </ul>
-                </div>
-
-                <div class="preco-box">
-                    <span class="valor">R$ 349,00</span>
-                    <button class="btn-comprar">Comprar</button>
-                </div>
-            </article>
-
-            <article class="card-produto">
-                <div>
-                    <div class="img-container">
-                        <img src="NOME_DA_BASE.jpg" alt="Base Skin Perfection">
-                    </div>
-                    <div class="card-header">
-                        <span class="categoria">Rosto</span>
-                        <h3>Base Skin Perfection Gold Fluid</h3>
-                    </div>
-
-                    <div class="tags-container">
-                        <span class="tag red">💧 Cobertura Média/Alta</span>
-                        <span class="tag gold">👑 Acabamento Acetinado</span>
-                    </div>
-
-                    <p class="descricao-produto">
-                        Uniformiza o tom da pele com efeito suave e aveludado. Fórmula enriquecida para manter o viço o dia inteiro.
-                    </p>
-
-                    <ul class="especificacoes-lista">
-                        <li><span>Resistente à Água?</span> <strong>Sim</strong></li>
-                        <li><span>Duração:</span> <strong>16 Horas</strong></li>
-                        <li><span>Uso:</span> <strong>Livre de óleos</strong></li>
-                        <li><span>Sensação:</span> <strong>Pele Leve</strong></li>
-                    </ul>
-                </div>
-
-                <div class="preco-box">
-                    <span class="valor">R$ 249,00</span>
-                    <button class="btn-comprar">Comprar</button>
-                </div>
-            </article>
-
-        </div>
-    </main>
-
-    <footer>
-        <p><strong>Elite Beauty</strong> - Red & Gold Elegance</p>
-        
-        <a href="https://wa.me/5549999000000" class="contato-whatsapp" target="_blank">
-            <img src="9fae4a460ce3bfa5ff7aa4404709cad7.jpg" alt="WhatsApp">
-            <span>Atendimento Exclusivo</span>
-        </a>
-
-        <p style="margin-top: 25px; font-size: 12px; color: #484f58;">&copy; 2026 Elite Beauty. Todos os direitos reservados.</p>
-    </footer>
-
-</body>
-</html>
